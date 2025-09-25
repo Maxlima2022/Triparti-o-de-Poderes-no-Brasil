@@ -5,43 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Livro Digital - Tripartição de Poderes no Brasil</title>
 <style>
-  /* Reset */
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family: 'Georgia', serif; background: #f0eee6; color: #222; }
+  body { font-family: 'Georgia', serif; background: #f0eee6; color: #222; padding: 20px; }
 
-  /* Container principal */
-  .book-container { 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    padding: 10px 15px; 
-    max-width: 100%; 
-  }
+  .book-container { display: flex; flex-direction: column; align-items: center; max-width: 900px; margin: auto; }
 
-  /* Container de páginas */
-  .pages { 
-    display: flex; 
-    overflow-x: auto; 
-    scroll-snap-type: x mandatory; 
-    -webkit-overflow-scrolling: touch; 
-    width: 100%; 
-    justify-content: center; 
-  }
+  .page { background: #fffdf5; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.15); padding: 25px 20px; margin: 12px 0; width: 100%; }
 
-  /* Cada página */
-  .page { 
-    flex: 0 0 100%; 
-    scroll-snap-align: start; 
-    background: #fffdf5; 
-    border-radius: 10px; 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15); 
-    padding: 25px 20px; 
-    margin: 6px; 
-    min-height: 75vh; 
-    max-width: 850px; 
-  }
-
-  /* Títulos */
   h1,h2,h3,h4 { margin-bottom: 10px; font-weight: 600; }
   h1 { font-size: 1.8rem; color:#2a2a2a; border-bottom: 2px solid #007BFF; padding-bottom:4px; margin-top:0; }
   h2 { font-size: 1.4rem; color:#333; margin-top:18px; }
@@ -51,26 +21,9 @@
   ul { margin-left: 18px; margin-bottom: 12px; }
   li { margin-bottom: 6px; }
 
-  /* Botões de navegação */
-  .nav-buttons { display:flex; justify-content: space-between; width: 100%; max-width: 850px; margin-top:10px; }
-  .nav-buttons button { 
-    background:#007BFF; 
-    color:#fff; 
-    border:none; 
-    padding:8px 18px; 
-    border-radius:20px; 
-    cursor:pointer; 
-    font-weight:600; 
-    font-size:0.9rem;
-  }
-  .nav-buttons button:hover { background:#0056b3; }
-
-  /* Footer */
   footer { text-align:center; margin-top:20px; font-size:0.85rem; color:#555; }
 
-  /* Responsividade */
   @media(max-width:1024px){
-    .page { padding:20px 15px; margin:5px; }
     h1 { font-size:1.6rem; }
     h2 { font-size:1.3rem; }
     h3 { font-size:1rem; }
@@ -78,12 +31,10 @@
   }
 
   @media(max-width:768px){
-    .page { padding:15px 12px; margin:4px; }
     h1 { font-size:1.4rem; }
     h2 { font-size:1.2rem; }
     h3 { font-size:0.95rem; }
     p { font-size:0.9rem; }
-    .nav-buttons button { padding:6px 12px; font-size:0.85rem; }
   }
 </style>
 </head>
