@@ -169,31 +169,6 @@
     Desenvolvido por Jackxwell Lima - Desenvolvedor Web
   </footer>
 </div>
-<script>
-const pageSections = document.querySelectorAll('.page');
-let currentPage = 0;
 
-// Botões de navegação
-document.getElementById('next').addEventListener('click', () => {
-  if(currentPage < pageSections.length - 1) currentPage++;
-  pageSections[currentPage].scrollIntoView({ behavior: 'auto', inline: 'start' });
-});
-document.getElementById('prev').addEventListener('click', () => {
-  if(currentPage > 0) currentPage--;
-  pageSections[currentPage].scrollIntoView({ behavior: 'auto', inline: 'start' });
-});
-
-// Swipe mobile simples
-let startX = 0;
-const swipeThreshold = 80;
-const pages = document.getElementById('pages');
-pages.addEventListener('touchstart', (e) => startX = e.touches[0].clientX);
-pages.addEventListener('touchend', (e) => {
-  let diff = startX - e.changedTouches[0].clientX;
-  if(diff > swipeThreshold && currentPage < pageSections.length - 1) currentPage++;
-  if(diff < -swipeThreshold && currentPage > 0) currentPage--;
-  pageSections[currentPage].scrollIntoView({ behavior:'auto', inline:'start' });
-});
-</script>
 </body>
 </html>
